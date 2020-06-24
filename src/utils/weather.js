@@ -11,8 +11,11 @@ const weatherData = (latitude, longitide, callback) => {
     }else{
       currentTemp = body.current.temp,
       maxTemp = body.daily[0].temp.max,
-      minTemp = body.daily[0].temp.min
-      callback(undefined,`The current temperature is ${currentTemp} degrees. The maximum temperature for today could be ${maxTemp} degrees, and the minimum temperature for today could be ${minTemp}`)
+      minTemp = body.daily[0].temp.min,
+      foreCast = body.current.weather[0].description
+      callback(undefined,`The current temperature is ${currentTemp} degrees.
+      The maximum temperature for today could be ${maxTemp} degrees, and the minimum temperature for today could be ${minTemp}.
+      Today it will be ${foreCast}. `)
     }
   })
 }
