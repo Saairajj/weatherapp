@@ -1,5 +1,3 @@
-console.log("This is Server Side JavaScript!");
-
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const locationMsg = document.querySelector('#msgone')
